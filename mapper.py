@@ -31,10 +31,11 @@ for line in sys.stdin:
     # then: count += 1, max = max(...), min = min(...), sum += fare
     if key not in stats:
         stats[key] = [0, float('-inf'), float('inf'), 0]
-        stats[key][0] += 1                                  # count
-        stats[key][1] = max(stats[key][1], fare)             # max fare
-        stats[key][2] = min(stats[key][2], fare)             # min fare
-        stats[key][3] += fare                                # sum
+
+    stats[key][0] += 1                                  # count
+    stats[key][1] = max(stats[key][1], fare)             # max fare
+    stats[key][2] = min(stats[key][2], fare)             # min fare
+    stats[key][3] += fare                                # sum
 
 # close: emit one line per key
 for key, (count, max_fare, min_fare, total) in stats.items():

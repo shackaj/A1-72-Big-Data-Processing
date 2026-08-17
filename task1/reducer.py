@@ -13,7 +13,7 @@ def format_output(key, count, max_fare, min_fare, total):
     else:
         avg_fare = 0
         
-    print(f"{taxi_id}\t{trip_type}\t{count}\t{max_fare}\t{min_fare}\t{avg_fare}")
+    print(f"{taxi_id}\t{trip_type}\t{count}\t{max_fare:.2f}\t{min_fare:.2f}\t{avg_fare:.2f}")
 
 for line in sys.stdin:
     

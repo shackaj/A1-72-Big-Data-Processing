@@ -2,6 +2,8 @@
 
 chmod +x mapper.py reducer.py
 chmod +x task4-run.sh
+hadoop fs -mkdir -p /Input
+hadoop fs -put -f data/Trips.txt /Input/Trips.txt
 hadoop fs -rm -r -f /Output/task4
 
 hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \

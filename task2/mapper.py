@@ -2,7 +2,7 @@ import sys
 import math
 
 #loaded medoids from intialisation txt, ensuring to skip iteration limit as v
-with open("initialiszation.txt") as f:
+with open("initialization.txt") as f:
     mds = [tuple(map(float, line.split())) for line in f.read().splitlines()[1:] if line.strip()]
 
 #processing trip.txt 

@@ -33,7 +33,10 @@ do
     cut -f1,2 full_output.txt > task2.txt
 
     # convergence check
-    if diff -q medoids.txt task2.txt > /dev/null; then
+     sort medoids.txt > /tmp/m_sorted.txt
+     sort task2.txt > /tmp/t_sorted.txt
+     if diff -q /tmp/m_sorted.txt /tmp/t_sorted.txt > /dev/null
+     then
         seeiftrue=1
     else
         seeiftrue=0

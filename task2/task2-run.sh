@@ -51,7 +51,6 @@ do
         hadoop fs -rm -r -f /Output/task2
         hadoop fs -mkdir -p /Output/task2
         hadoop fs -cp "$OUTDIR"/part-* /Output/task2/
-        mv task2.txt medoids.txt
         break
     # save new medoids and loop again if convergence != true
     else

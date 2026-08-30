@@ -17,8 +17,8 @@ do
     hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
     -D mapreduce.job.reduces=3 \
     -files medoids.txt,mapper.py,reducer.py \
-    -mapper ./mapper.py \
-    -reducer ./reducer.py \
+    -mapper "/usr/bin/python3 mapper.py" \
+    -reducer "/usr/bin/python3 reducer.py" \
     -input /Input/Trips.txt \
     -output "$OUTDIR"
 
